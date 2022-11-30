@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ReactiveFormsModule } from '@angular/forms';
 
 import {
   PERFECT_SCROLLBAR_CONFIG,
@@ -25,24 +24,14 @@ import {
 } from './containers';
 
 import {
-  AvatarModule,
   BadgeModule,
   BreadcrumbModule,
-  ButtonGroupModule,
   ButtonModule,
-  CardModule,
-  DropdownModule,
   FooterModule,
-  FormModule,
   GridModule,
   HeaderModule,
-  ListGroupModule,
   NavModule,
-  ProgressModule,
-  SharedModule,
   SidebarModule,
-  TabsModule,
-  UtilitiesModule,
 } from '@coreui/angular-pro';
 
 import { IconModule, IconSetService } from '@coreui/icons-angular';
@@ -59,35 +48,23 @@ const APP_CONTAINERS = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, ...APP_CONTAINERS],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    AvatarModule,
     BreadcrumbModule,
     FooterModule,
-    DropdownModule,
     GridModule,
     HeaderModule,
     SidebarModule,
     IconModule,
-    PerfectScrollbarModule,
     NavModule,
     ButtonModule,
-    FormModule,
-    UtilitiesModule,
-    ButtonGroupModule,
-    ReactiveFormsModule,
     SidebarModule,
-    SharedModule,
-    TabsModule,
-    ListGroupModule,
-    ProgressModule,
     BadgeModule,
-    ListGroupModule,
-    CardModule,
   ],
+  declarations: [AppComponent, ...APP_CONTAINERS],
+  bootstrap: [AppComponent],
   providers: [
     {
       provide: LocationStrategy,
@@ -99,8 +76,6 @@ const APP_CONTAINERS = [
     },
     IconSetService,
     Title
-  ],
-  bootstrap: [AppComponent]
+  ]
 })
-export class AppModule {
-}
+export class AppModule { }

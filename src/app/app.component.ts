@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 import { IconSetService } from '@coreui/icons-angular';
+
 import { iconSubset } from './icons/icon-subset';
 import { brandSet, freeSet } from '@coreui/icons';
-import { Title } from '@angular/platform-browser';
+
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -12,7 +14,7 @@ import { Title } from '@angular/platform-browser';
   template: '<router-outlet></router-outlet>',
 })
 export class AppComponent implements OnInit {
-  title = 'CoreUI Pro Angular Admin Template Starter';
+  title = 'SAAFE Alliance/Corp Auth';
 
   constructor(
     private router: Router,
@@ -21,7 +23,7 @@ export class AppComponent implements OnInit {
   ) {
     titleService.setTitle(this.title);
     // iconSet singleton
-    iconSetService.icons = { ...iconSubset };
+    iconSetService.icons = { ...iconSubset, ...freeSet };
   }
 
   ngOnInit(): void {

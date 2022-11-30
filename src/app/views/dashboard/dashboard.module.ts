@@ -13,9 +13,11 @@ import {
   ProgressModule,
   TableModule,
   TabsModule,
-  WidgetModule
+  WidgetModule,
+  SharedModule,
 } from '@coreui/angular-pro';
 
+import { IconModule } from '@coreui/icons-angular';
 import { ChartjsModule } from '@coreui/angular-chartjs';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
@@ -37,8 +39,10 @@ import { DashboardComponent } from './dashboard.component';
     ButtonGroupModule,
     AvatarModule,
     TableModule,
-    WidgetModule,
     ChartjsModule,
+    WidgetModule,
+    IconModule,
+    SharedModule,
   ],
   declarations: [DashboardComponent]
 })
